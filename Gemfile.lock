@@ -28,6 +28,9 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (2.1.1.20140710)
+      execjs
+    bcrypt (3.1.7)
     bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
     builder (3.2.2)
@@ -172,6 +175,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    stamp (0.5.0)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -198,6 +202,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
+  bcrypt
   bootstrap-sass
   byebug
   coffee-rails
@@ -205,6 +211,7 @@ DEPENDENCIES
   guard-bundler
   guard-livereload
   guard-rspec
+  haml
   haml-rails
   jquery-rails
   pg
@@ -214,6 +221,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails
   spring
+  stamp
   therubyracer
   thin
   turbolinks

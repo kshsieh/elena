@@ -1,0 +1,12 @@
+%h1 Events
+= link_to 'Create New', new_admin_event_path, class: 'btn btn-primary pull-right'
+%%table.table.table-striped
+  %thead
+    %th Date
+    %th Group
+    %th Venue
+  - @events.each do |e|
+    %tr
+      %td= e.date.stamp('May 20, 1989')
+      %td= e.group_name
+      %td= e.venue_name

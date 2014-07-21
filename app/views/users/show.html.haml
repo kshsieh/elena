@@ -1,0 +1,11 @@
+%h1.text-center Elena Pinderhughes
+.text-center 
+  Hello! My website is currently under construction. 
+  %br Please check out the tour dates below in the meantime
+.text-center
+  = image_tag 'jaleel.jpg', width: 500
+%h4.text-center Tour Dates
+.text-center
+  - @events.each do |e|
+    = "#{e.venue_name}, #{e.group_name}, #{e.date.stamp('May 20, 1989')}"
+    %br/

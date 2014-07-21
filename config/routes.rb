@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  root 'users#show'
+
+  get 'login', to: 'sessions#new'
+  get 'logout', to: 'sessions#logout'
+  get 'unauthorized', to: 'sessions#unauthorized'
+
+  resource :user
+
+  resources :sessions do
+    get :logout, on: :member
+    get :unauthorized, on: :collection
+  end
+
+  namespace :admin do
+    resources :events
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
